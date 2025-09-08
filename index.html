@@ -58,7 +58,8 @@
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <button class="btn bg-yellow-400 border-none rounded-full text-[#15803D]">Plant a Tree</button>
+                    <button id="modalBtn" class="btn bg-yellow-400 border-none rounded-full text-[#15803D]">Plant a
+                        Tree</button>
                 </div>
             </div>
         </div>
@@ -100,107 +101,51 @@
                     <!-- Title -->
                     <h1 class="text-2xl font-semibold text-center mb-6">Choose Your Trees</h1>
 
+
                     <!-- Grid Layout -->
                     <div class="grid grid-cols-12 gap-6">
 
                         <!-- Left Sidebar (Categories) -->
-                        <div class="col-span-12 md:col-span-2 bg-white rounded-lg shadow p-4 h-fit">
-                            <h2 class="font-semibold mb-3">Categories</h2>
-                            <ul class="space-y-2">
-                                <li><button class="w-full text-left px-3 py-1 rounded bg-green-600 text-white">All
-                                        Trees</button></li>
-                                <li><button class="w-full text-left px-3 py-1 rounded hover:bg-green-100">Fruit
-                                        Trees</button></li>
-                                <li><button class="w-full text-left px-3 py-1 rounded hover:bg-green-100">Flowering
-                                        Trees</button></li>
-                                <li><button class="w-full text-left px-3 py-1 rounded hover:bg-green-100">Shade
-                                        Trees</button></li>
-                                <li><button class="w-full text-left px-3 py-1 rounded hover:bg-green-100">Medicinal
-                                        Trees</button></li>
+                        <div class="col-span-12 md:col-span-2 rounded-lg p-4 h-fit">
+
+                            <ul id="categories">
+
                                 <!-- Add more categories -->
                             </ul>
                         </div>
 
                         <!-- Middle Content (Products) -->
-                        <div
+                        <div id="allplants"
                             class="w-11/12 mx-auto md:w-full col-span-16 md:col-span-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                            <!-- Card -->
-                            <div id="plants-container" class="">
-                                <!-- bg-white rounded-2xl shadow p-3 hover:shadow-lg transition -->
-                                <!-- <div class="h-32 bg-gray-200 rounded flex items-center justify-center">
-                                    <span class="text-gray-400">Image</span>
+
+
+                            <div id="modalOverlay"
+                                class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+
+                                <!-- Modal Container -->
+                                <div class="bg-white rounded-xl shadow-lg w-96 p-6 relative">
+                                    <h2 class="text-xl font-bold mb-3">Dynamic Modal</h2>
+                                    <p class="text-gray-700">This is a popup modal opened by a button with a dynamic
+                                        class.</p>
+
+                                    <!-- Close Button -->
+                                    <button id="closeModalBtn"
+                                        class="mt-4 w-full px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">
+                                        Close
+                                    </button>
                                 </div>
-                                <h3 class="font-semibold mt-2">Mango Tree</h3>
-                                <p class="text-sm text-gray-600">A fast-growing tropical tree that produces delicious,
-                                    juicy mangoes.</p>
-                                <div class="flex justify-between items-center mt-2">
-                                    <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded">Fruit
-                                        Tree</span>
-                                    <span class="font-semibold">৳500</span>
-                                </div>
-                                <button
-                                    class="w-full mt-3 py-2 rounded-full bg-green-600 text-white hover:bg-green-700">Add
-                                    to Cart</button> -->
                             </div>
 
-
-                            <!-- Card -->
-                            <!-- <div class="bg-white rounded-2xl shadow p-3 hover:shadow-lg transition">
-                                <div class="h-32 bg-gray-200 rounded flex items-center justify-center">
-                                    <span class="text-gray-400">Image</span>
-                                </div>
-                                <h3 class="font-semibold mt-2">Mango Tree</h3>
-                                <p class="text-sm text-gray-600">A fast-growing tropical tree that produces delicious,
-                                    juicy mangoes.</p>
-                                <div class="flex justify-between items-center mt-2">
-                                    <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded">Fruit
-                                        Tree</span>
-                                    <span class="font-semibold">৳500</span>
-                                </div>
-                                <button
-                                    class="w-full mt-3 py-2 rounded-full bg-green-600 text-white hover:bg-green-700">Add
-                                    to Cart</button>
-                            </div> -->
-
-
-                            <!-- Card -->
-                            <!-- <div class="bg-white rounded-2xl shadow p-3 hover:shadow-lg transition">
-                                <div class="h-32 bg-gray-200 rounded flex items-center justify-center">
-                                    <span class="text-gray-400">Image</span>
-                                </div>
-                                <h3 class="font-semibold mt-2">Mango Tree</h3>
-                                <p class="text-sm text-gray-600">A fast-growing tropical tree that produces delicious,
-                                    juicy mangoes.</p>
-                                <div class="flex justify-between items-center mt-2">
-                                    <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded">Fruit
-                                        Tree</span>
-                                    <span class="font-semibold">৳500</span>
-                                </div>
-                                <button
-                                    class="w-full mt-3 py-2 rounded-full bg-green-600 text-white hover:bg-green-700">Add
-                                    to Cart</button>
-                            </div> -->
-
-
-                            <!-- Repeat More Cards... -->
                         </div>
+
 
                         <!-- Right Sidebar (Cart) -->
                         <div class="col-span-12 md:col-span-2 bg-white rounded-lg shadow p-4 h-fit">
                             <h2 class="font-semibold mb-3">Your Cart</h2>
-                            <ul class="space-y-2">
-                                <li class="flex justify-between items-center">
-                                    <span>Mango Tree</span>
-                                    <span>৳500 × 1</span>
-                                </li>
-                                <li class="flex justify-between items-center">
-                                    <span>Guava Tree</span>
-                                    <span>৳500 × 1</span>
-                                </li>
-                            </ul>
+                            <ul id="cartsBtn" class="space-y-2"></ul>
                             <div class="mt-4 border-t pt-2 flex justify-between font-semibold">
-                                <span>Total:</span>
-                                <span>৳1000</span>
+                                <p class="font-semibold">Total : ৳<span id="totalPrice">0</span></p>
+
                             </div>
                         </div>
 
