@@ -18,6 +18,17 @@
 </head>
 
 <body>
+
+    <div id="loader" class="hidden fixed inset-0 flex items-center justify-center bg-white bg-opacity-75 z-50">
+        <div class="flex space-x-2">
+            <div class="w-4 h-4 bg-green-600 rounded-full animate-bounce"></div>
+            <div class="w-4 h-4 bg-green-600 rounded-full animate-bounce [animation-delay:-0.2s]"></div>
+            <div class="w-4 h-4 bg-green-600 rounded-full animate-bounce [animation-delay:-0.4s]"></div>
+        </div>
+    </div>
+
+
+
     <!-- header section -->
     <div class="bg-[#15803D]">
         <div class="container">
@@ -52,9 +63,9 @@
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1">
-                        <button class="text-white mx-1">About</button>
-                        <button class="text-white mx-1">Gallery</button>
-                        <button class="text-white mx-1">Plant a Tree</button>
+                        <button class="text-white mx-1 cursor-pointer">About</button>
+                        <button class="text-white mx-1 cursor-pointer">Gallery</button>
+                        <button class="text-white mx-1 cursor-pointer">Plant a Tree</button>
                     </ul>
                 </div>
                 <div class="navbar-end">
@@ -74,7 +85,7 @@
                 <img loading="lazy" src="./assets/hero-leaf1.png" alt="">
             </div>
             <div class="flex flex-col items-center justify-center text-center px-4">
-                <h2 class="text-2xl md:text-4xl font-bold mb-2">
+                <h2 class="text-2xl md:text-3xl font-bold mb-2">
                     Plant a Tree, Grow a Future
                 </h2>
                 <p class="text-sm md:text-[12px] text-[#1F2937] opacity-[80%] my-2">
@@ -119,22 +130,6 @@
                             class="w-11/12 mx-auto md:w-full col-span-16 md:col-span-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
 
 
-                            <div id="modalOverlay"
-                                class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-
-                                <!-- Modal Container -->
-                                <div class="bg-white rounded-xl shadow-lg w-96 p-6 relative">
-                                    <h2 class="text-xl font-bold mb-3">Dynamic Modal</h2>
-                                    <p class="text-gray-700">This is a popup modal opened by a button with a dynamic
-                                        class.</p>
-
-                                    <!-- Close Button -->
-                                    <button id="closeModalBtn"
-                                        class="mt-4 w-full px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300">
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
 
                         </div>
 
@@ -144,7 +139,7 @@
                             <h2 class="font-semibold mb-3">Your Cart</h2>
                             <ul id="cartsBtn" class="space-y-2"></ul>
                             <div class="mt-4 border-t pt-2 flex justify-between font-semibold">
-                                <p class="font-semibold">Total : ৳<span id="totalPrice">0</span></p>
+                                <p class="font-semibold">Total : <span id="totalPrice">0</span></p>
 
                             </div>
                         </div>
