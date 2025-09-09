@@ -2,7 +2,7 @@
 
 ### My Answer
 
-**##var## এটা পুরনো "function scoped"**<br>
+##var## ** এটা পুরনো "function scoped"**<br>
 **<ul>let</ul> এটা নতুন "block scoped" ভ্যালু বদলানো যায়।**<br>
 **<ul>const</ul> এটা নতুন "block scoped" ভ্যালু বদলানো যায় না।**<br>
 
